@@ -11,6 +11,6 @@
 
   server.use('/api/project', ProjectRouter);
   //   server.use('/api/resc', ResourceRouter);
-  //   server.use('/api/task', TaskRouter);
+  server.use('/api/task', TaskRouter);
 
   module.exports = server;

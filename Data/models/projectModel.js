@@ -36,8 +36,8 @@ const remove = (id) => {
 
 const getTasks = (id) => {
     return db('project')
-        .select('*')
-
+        .select('project.id', 'project.proj_name', 'task.task_description', 'task.task_complete')
+        .innerJoin('task', { 'project.id': 'task.project_id' })
 }
 
 

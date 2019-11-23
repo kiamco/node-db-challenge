@@ -17,7 +17,7 @@ const findById = (id) => {
 
 const add = (task) => {
     return db('task')
-        .insert(scheme)
+        .insert(task)
 }
 
 const update = (changes, id) => {
@@ -39,7 +39,6 @@ const remove = (id) => {
 module.exports = {
     find,
     findById,
-    findSteps,
     add,
     update,
     remove

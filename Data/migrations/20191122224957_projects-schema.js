@@ -21,7 +21,7 @@ exports.up = function(knex) {
             task.increments();
             task.string('task_description').notNullable();
             task.string('task_notes');
-            task.integer('complete').defaultTo(0);
+            task.integer('task_complete').defaultTo(0);
             task.integer('project_id')
                 .unsigned()
                 .notNullable()
